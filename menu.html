@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Example</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: darkcyan;
+        padding: 15px;
+        color: antiquewhite;
+    }
+
+    .menu-button{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+    }
+
+    .bar{
+        width: 30px;
+        height: 4px;
+        background-color: antiquewhite;
+        transition: transform 0.3 ease-in-out;
+    }
+
+    .nav-links{
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links li{
+        padding: 0 10px;
+    }
+
+    .nav-links a{
+        padding: 0 10px;
+    }
+
+    .nav-links a:hover{
+        color: blanchedalmond;
+        transform: scale(1);
+    }
+
+    @media(max-width: 786px){
+        .nav-links{
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: black;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .nav-links.show{
+            display: flex;
+        }
+
+        .menu-button{
+            display: flex;
+        }
+    }
+
+   
+</style>
+<body>
+    <div class="navbar">
+        <div class="menu-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li a href="#">Home</li>
+            <li a href="#">Services</li>
+            <li a href="#">Contact</li>
+        </ul>
+    </div>
+</body>
+</html>

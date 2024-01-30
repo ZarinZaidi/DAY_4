@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rotate{
+            transform: rotate(45deg);
+            transition: transform 0.5s ease-in-out, opacity 0.3s ease;
+        }
+
+        .rotate:hover{
+            transform: scale(1.2) rotate(180deg);
+        }
+
+        .translate{
+            transform: translate(50px, 20px);
+        }
+
+        .scale{
+            transform: scale(1.5);
+        }
+
+        .skew{
+            transform: skew(30deg, 0);
+        }
+
+        .translate3d{
+            transform: translate3d(50px, 30px, 20px);
+        }
+
+        .rotate3d{
+            transform: rotate3d(1, 45, 4, 180deg);
+        }
+
+        /**/
+        .transform-3d{
+            transform: perspective(500px) rotateX(45deg);
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 119, 255);
+            color: azure;
+            text-align: center;
+            line-height: 50px;
+            margin: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .box:hover{
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        /*Combined effects*/
+        .combined{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(255, 132, 0);
+            color: azure;
+            text-align: center;
+            line-height: 150px;
+            margin: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .combined:hover{
+            transform: scale(1.5) rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="rotate box">Rotate</div>
+    <div class="translate box">Translate</div>
+    <div class="scale box">Scale</div>
+    <div class="skew box">Skew</div>
+
+    <div class="translate3d box">Translate 3d</div>
+    <div class="rotate3d box">Rotate 3d</div>
+    <div class="transform-3d box">3d Transform</div>
+    
+
+    <div class="box">Hover for transition</div>
+    <div class="combined">Combined effects</div>
+
+    <div class="rotate">Rotate transition</div>
+</body>
+</html>

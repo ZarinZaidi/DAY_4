@@ -1,0 +1,332 @@
+/*INSTRUCTIONS
+  Apply basic styling to improve the visual presentation.
+  Use external CSS files for style rules.
+  Implement a responsive design with media queries for different screen sizes.
+  Choose either Flexbox or CSS Grid for article layout and structure.
+  Add a form to each article with text inputs for user interaction.
+  Style the form elements for a cohesive look.
+  Apply advanced selectors and pseudo-classes for specific styling.
+  Implement CSS transitions or animations for interactive elements.
+  Use transforms creatively to enhance the layout or visual appeal.
+  Experiment with advanced positioning for unique design elements within articles.
+  Implement fluid typography for a responsive reading experience.
+  Ensure proper contrast, line height, and legibility across devices.
+  Follow a consistent naming convention (e.g., BEM) for CSS classes.
+  Structure CSS for maintainability and scalability.
+  Optimise CSS for performance, minimising render blocking.
+*/
+
+/*Implement fluid typography for a responsive reading experience.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+  
+body {
+  background: #f5f6f7;
+  color: #1b1b32;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+  
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #1b1b32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+ 
+
+#logo {
+  width: max(100px, 18vw);
+  background-color: #0a0a23;
+  aspect-ratio: auto;
+  padding: 0.4rem;
+}
+  
+h1 {
+  color: #f1be32;
+  font-size: min(5vw, 1.2em);
+  text-align: center;
+}
+  
+nav {
+  width: 50%;
+  max-width: 300px;
+  height: 50px;
+}
+  
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+  
+nav > ul > li {
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+  
+nav > ul > li:hover {
+  background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;
+}
+  
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+  
+main {
+  padding-top: 50px;
+}
+  
+section {
+  width: 80%;
+  margin: 0 auto 10px auto;
+  max-width: 600px;
+}
+  
+h1, h2 {
+  font-family: 'Exo 2', sans-serif;
+}
+  
+h2 {
+  border-bottom: 4px solid #dfdfe2;
+  margin-top: 0px;
+  padding-top: 60px;
+}
+  
+.info {
+  padding: 10px 0 0 5px;
+}
+  
+input {
+  font-size: 16px;
+}
+  
+.info label, .info input {
+  display: inline-block;
+}
+  
+.info input {
+  width: 50%;
+  text-align: left;
+}
+  
+.info label {
+  width: 10%;
+  min-width: 55px;
+  text-align: right;
+}
+  
+.question-block {
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+}
+
+p {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+  
+.question {
+  border: none;
+  padding-bottom: 0;
+}
+
+.answers-list {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  display: block;
+  margin: 40px auto;
+  width: 60%;
+  padding: 15px;
+  font-size: 23px;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+  
+footer {
+  background-color: #2a2a40;
+  display: grid;/*ori:flex*/
+  justify-content: center;
+}
+  
+footer, footer a {
+  color: #dfdfe2;
+}
+  
+address {
+  text-align: center;
+  padding: 0.3em;
+}
+
+/*Project 1-3 from here onwards*/
+.projects-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.svg-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.projects-item img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.projects-item img:hover{
+  transform: scale(1.4);
+}
+
+.projects-item::after {
+  content: "";
+  width: 350px;
+}
+
+.projects{
+  padding: 5px;
+  text-align: center;
+}
+
+svg{
+  transition: transform 0.5s ease-in-out;
+}
+
+svg:hover{
+  transform: scale(1.2) rotate(360deg);
+}
+/*Project 1-3 up to here only*/
+
+/*Project 4:articles from here onwards*/
+main {
+  display: grid;
+  row-gap: 1rem;
+}
+
+hr {
+margin: 1.5rem 0;
+border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.text {
+  text-align: justify;
+}
+
+.hero-title {
+text-align: center;
+color: orangered;
+font-size: 6rem;
+}
+
+.hero-subtitle {
+font-size: 2rem;
+color: orangered;
+text-align: center;
+}
+
+.author {
+font-size: 1.6rem;
+font-family: "Raleway", sans-serif;
+}
+
+.author-name a:hover {
+background-color: rgb(249, 156, 123);
+color: #0a0a23;
+}
+
+.publish-date {
+color: rgb(249, 156, 123);
+}
+
+.first-paragraph::first-letter {
+font-size: 5rem;
+color: orangered;
+float: left;
+margin-right: 1rem;
+}
+
+.quote {
+color: #00beef;
+font-size: 2rem;
+text-align: center;
+font-family: "Raleway", sans-serif;
+}
+
+.quote::before {
+content: '" ';
+}
+
+.quote::after {
+content: ' "';
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle,
+  .author,
+  .quote {
+    font-size: 1.4rem;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  } 
+}
+
+@media only screen and (max-width: 420px){
+  .hero-title {
+    font-size: 2.5rem
+  }
+}
+/*Project 4:articles up to here only*/

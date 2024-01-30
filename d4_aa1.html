@@ -1,0 +1,320 @@
+<!--INSTRUCTIONS
+Create a responsive blog page with multiple articles, each showcasing text, images, and interactive features, including input fields for user interaction.
+    Use HTML5 semantic elements for the overall structure.
+    Include a header with a blog title and a navigation menu with links to different sections.
+    Create multiple articles, each with a title, publication date, author information, content (text, images), and a form.
+    Include radio buttons and checkboxes in the forms.
+    Ensure the form is responsive and user-friendly.
+
+Students should submit their HTML and CSS files along with any assets (images) used in the exercise. You are encouraged to provide comments in your code explaining.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4: Afternoon Assignment 1</title>
+    <link rel="stylesheet" href="d4_aa1.css">
+</head>
+
+
+<body>
+    <header>
+        <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhClvMfqTEOzdtsowrcN3HjGVEnU7Vt_F3Yw&usqp=CAU">
+        
+        <h1>Zarin Zaidi's Portfolio</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contacts">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <!--Section on previous projects done. Incorporating Gallery, SVG, Interactive Positioning, and User Feedback-->
+    <section>
+        <div id="about" class="about">
+            <article>
+                <h2>Welcome to Zarin Zaidi's Portfolio</h2>
+                <p>This page will bring you along Zarin's journey toward becoming Fullstack Engineer. <br>From zero to hero, let's go!</p>
+            </article>
+        </div>
+        
+        <!--First projects with img-->
+        <div class="projects">
+            <h2>Project 1: Meals Diary</h2>
+            <div class="projects-item">
+                <img src="https://www.spendwithpennies.com/wp-content/uploads/2023/10/Turkey-Sandwich-SpendWithPennies-4.jpg">
+                <img src="https://www.spendwithpennies.com/wp-content/uploads/2023/06/1200-Caesar-Salad-Recipe-SpendWithPennies.jpg">
+                <img src="https://www.ambitiouskitchen.com/wp-content/uploads/2021/04/Vegan-Stir-Fry-Sesame-Noodles-7.jpg">
+            </div> 
+        </div>
+
+        <!--Second projects with img-->
+        <div class="projects">
+            <h2>Project 2: Visit Malaysia</h2>
+            <div class="projects-item">
+                <img src="https://asiamarvels.com/wp-content/uploads/2017/10/hiking-in-malaysia-1.jpg">
+                <img src="https://cdn.kimkim.com/files/a/images/522b8c7df4a45dabe356d755db157db84acaaa95/original-4accc57f4a3dec9de99e689892431dac.jpg">
+                <img src="https://images.lifestyleasia.com/wp-content/uploads/2017/08/10002159/Perhentian-Island-iStock.png">
+            </div>
+        </div>
+        
+        <!--Third projects with SVG-->
+        <div class="projects">
+            <h2>Project 3: SVG</h2>
+            <p>Hover to see some interesting tumble!</p>
+            <div class="svg-item">
+                <svg width="200" height="200">
+                    <circle cx="100" cy="100" r="80" fill="yellow" stroke="orange" stroke-width="5"></circle>
+                    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="20">Hello</text>
+                </svg>
+                <svg width="200" height="200">
+                    <circle cx="100" cy="100" r="80" fill="orange" stroke="yellow" stroke-width="5"></circle>
+                    <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="20">World!</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!--Sections on articles related to fullstack topics. Incorporating User Interaction.-->
+    <!--First articles with quiz-->
+    <div id="articles" class="projects">
+        <h2>Project 4: Articles</h2>
+    <main>
+    <section class="heading">
+        <div class="hero">
+            <h1 class="hero-title">WHAT IS HTML</h1>
+            <p class="hero-subtitle">
+            HTML, or Hypertext Markup Language, is a markup language for the web that defines the structure of web pages.
+            </p>
+        </div>
+        <div class="author">
+            <p class="author-name"> By <a href="https://www.freecodecamp.org/news/what-is-html-definition-and-meaning/" target="_blank" rel="noreferrer">Kolade Chris</a>
+            </p>
+            <p class="publish-date">August 24, 2021</p>
+        </div>
+    </section>
+    <section class="text">
+        <p class="first-paragraph">
+            HTML determines the structure of web pages. This structure alone is not enough to make a web page look good and interactive. So you'll use assisted technologies such as CSS and JavaScript to make your HTML beautiful and add interactivity, respectively.<br>
+            In this case, I like to break down the three technologies; HTML, CSS, and JavaScript this way: they are like a human body.
+        </p>
+        <blockquote>
+          <hr />
+          <p class="quote">
+            HTML is the skeleton, CSS is the skin, and JavaScript is the circulatory, digestive, and respiratory systems that brings the structure and the skin to life.
+          </p>
+          <hr />
+        </blockquote>
+        <p>
+            Here's the anatomy of a basic HTML page:
+            <img src="https://www.keywordseo.com.tw/projectfiles/images/what%20is%20html-9.png">
+        </p>
+        <img>
+    </section>
+    </main>
+    <!--Quiz time-->
+    <form method="post" action="/submit">
+        <section role="region" aria-labelledby="html-questions">
+            <h2 id="html-questions">HTML</h2>
+            <div class="question-block">
+              <p>1</p>
+              <fieldset class="question" name="html-question-one">
+                <legend>
+                    HTML determines the aesthetic of web pages.
+                </legend>
+                <ul class="answers-list">
+                  <li>
+                    <label for="q1-a1">
+                      <input type="radio" id="q1-a1" name="q1" value="false" />
+                      True
+                    </label>
+                  </li>
+                  <li>
+                    <label for="q1-a2">
+                      <input type="radio" id="q1-a2" name="q1" value="true" />
+                      False
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="question-block">
+              <p>2</p>
+              <fieldset class="question" name="html-question-two">
+                <legend>
+                  HTML alone is not enough to create a beautiful and interactive web page.
+                </legend>
+                <ul class="answers-list">
+                  <li>
+                    <label for="q2-a1">
+                      <input type="radio" id="q2-a1" name="q2" value="true" />
+                      True
+                    </label>
+                  </li>
+                  <li>
+                    <label for="q2-a2">
+                      <input type="radio" id="q2-a2" name="q2" value="false" />
+                      False
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+        </section>
+        <button type="submit">Send</button>
+    </form>
+
+    <!--Second articles with quiz-->
+    <main>
+    <section class="heading">
+        <div class="hero">
+            <h1 class="hero-title">WHAT IS CSS</h1>
+            <p class="hero-subtitle">
+                CSS stands for Cascading Style Sheets language and is used to stylize elements written in a markup language such as HTML. It separates the content from the visual representation of the site.
+            </p>
+        </div>
+        <div class="author">
+            <p class="author-name"> By <a href="https://www.hostinger.my/tutorials/what-is-css" target="_blank" rel="noreferrer">Domantas G.</a>
+            </p>
+            <p class="publish-date">May 15, 2023</p>
+        </div>
+    </section>
+    <section class="text">
+        <p class="first-paragraph">
+            CSS let you stylize everything on a different file, thus creating the design there and later on integrating the CSS files on top of the HTML markup. This makes the actual HTML markup much cleaner and easier to maintain. <br>
+            The relation between HTML and CSS is strongly tied together since HTML is the very foundation of a site and CSS is all of the aesthetics of an entire website.
+        </p>
+        <blockquote>
+          <hr />
+          <p class="quote">
+            CSS is not technically a necessity, but you probably wouldn't want to look at a web page that features only HTML elements as it would look completely bare-boned.
+          </p>
+          <hr />
+        </blockquote>
+        <p>
+            Let's sum up what we have learned here about CSS:
+            <ul>
+                <li>CSS was created to work in conjunction with other markup languages like HTML. It is used to stylize a page.</li>
+                <li>There are three styles of implementing CSS, and you can use the External style to accord multiple pages at once.</li>
+                <li>You won't go far without seeing some kind of CSS implementation nowadays since it's as much of a requirement as the markup language itself.</li>
+            </ul>
+        </p>
+        <img>
+    </section>
+    </main>
+    <!--Quiz time-->
+    <form method="post" action="/submit">
+        <section role="region" aria-labelledby="css-questions">
+            <h2 id="css-questions">CSS</h2>
+            <div class="question-block">
+                <p>1</p>
+                <fieldset class="question" name="css-question-one">
+                  <legend>
+                      Does CSS makes the actual HTML markup much cleaner and easier to maintain?
+                  </legend>
+                  <ul class="answers-list">
+                    <li>
+                      <label for="q1-a1">
+                        <input type="radio" id="q1-a1" name="q1" value="true" />
+                        Yes
+                      </label>
+                    </li>
+                    <li>
+                      <label for="q1-a2">
+                        <input type="radio" id="q1-a2" name="q1" value="false" />
+                        No
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="question-block">
+                <p>2</p>
+                <fieldset class="question" name="css-question-two">
+                  <legend>
+                    CSS was created to work alone and technically a necessity.
+                  </legend>
+                  <ul class="answers-list">
+                    <li>
+                      <label for="q2-a1">
+                        <input type="radio" id="q2-a1" name="q2" value="false" />
+                        True
+                      </label>
+                    </li>
+                    <li>
+                      <label for="q2-a2">
+                        <input type="radio" id="q2-a2" name="q2" value="true" />
+                        False
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+            </div>
+        </section>
+        <button type="submit">Send</button>
+    </form>
+    </div>
+    <!--Sections on feedbacks from readers. Incorporating form style and validation.-->
+    <section>
+    <div>
+        <h2>Feedbacks</h2>
+        <p>Please leave behind your constructive criticism regarding Zarin's Portfolio. Thank you for your time!</p>       
+        <form action="/submit" method="post" onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Contact information</legend>
+
+                <div class="info">
+                <label for="name">Name: </label>
+                <input placeholder="Enter your full name" type="text" id="name" name="name" required>
+                </div>
+
+                <div class="info">
+                <label for="email">Email: </label>
+                <input placeholder="Enter your email" type="email" id="email" name="email" required>
+                </div>
+
+                <div class="info">
+                <label for="message">Message: </label>
+                <input placeholder="Type in your message" type="text" id="message" name="message" required>
+                </div>
+        
+            </fieldset>
+                
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <!--Validation on email for feedbacks form-->
+        <script>
+            function validateForm(){
+                var email = document.getElementById("email").value;
+                
+                if(!email.includes("@")){
+                    alert("Please enter a valid email address")
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </div>
+    </section>
+    </main>
+
+    <!--Contacts section-->
+    <footer>
+        <div id="contacts">
+            <address>
+                <a href="https://www.linkedin.com/in/noor-zarina-mohd-zaidi-925982155/" target="_blank">Zarin Zaidi</a><br />
+                Bangi<br />
+                Selangor<br />
+                Malaysia
+              </address>
+            <p>&copy; 2024 Zarin's Portfolio</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning and Layout Techniques</title>
+    <style>
+        .absolute{
+            position: absolute;
+            top: 50px;
+            bottom: 20px;
+        }
+
+        .box{
+            height: 100px;
+            background-color: rgb(49, 121, 194);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .relative{
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .static{
+            position: static;
+        }
+
+        .fixed{
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .sticky{
+            position: sticky;
+            top: 0;
+            background-color: brown;
+        }
+
+        /*Layout Technique*/
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        /*Responsive Layout*/
+        @media screen and (max-width: 768px) {
+            .container{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Positioning and Layout Techniques</h1>
+
+    <div class="static box">Static</div>
+    <div class="relative box">Relative</div>
+    <div class="absolute box">Absolute</div>
+    <div class="fixed box">Fixed</div>
+    <div class="sticky box">Sticky</div>
+
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box"></div>
+        <div class="box">3</div>
+    </div>
+
+<!--
+1. Static Positioning: Default, follows the normal document flow.
+2. Relative Positioning: Adjusts position relative to its normal position.
+3. Absolute Positioning: Removed from flow, positioned relative to nearest positioned ancestor.
+4. Fixed Positioning: Removed from flow, positioned relative to the viewport, stays fixed during scrolling.
+5. Sticky Positioning: Behaves as relative until a threshold, then becomes fixed.
+-->
+</body>
+</html>
